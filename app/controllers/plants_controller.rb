@@ -30,7 +30,8 @@ class PlantsController < ApplicationController
   def destroy
     plant = find_plant
     plant.destroy
-    render json: {}
+    head :no_content
+    # render json: {}
   end
 
   private
